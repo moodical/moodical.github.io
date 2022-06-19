@@ -1,6 +1,6 @@
 {
   "name": "moodical",
-  "homepage": "./",
+  "homepage": "https://moodical.github.io",
   "main": "./electron/main.js",
   "version": "0.1.0",
   "private": true,
@@ -28,7 +28,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "ebuild": "npm run build && node_modules/.bin/build",
-    "electron:start": "concurrently \"npm run start\" \"wait-on http://localhost:3001 && electron .\""
+    "electron:start": "concurrently \"npm run start\" \"wait-on http://localhost:3001 && electron .\"",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +51,7 @@
   },
   "devDependencies": {
     "electron": "^19.0.4",
-    "electron-packager": "^15.5.1"
+    "electron-packager": "^15.5.1",
+    "gh-pages": "^4.0.0"
   }
 }
